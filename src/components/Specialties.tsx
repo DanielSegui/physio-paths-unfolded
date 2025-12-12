@@ -1,4 +1,4 @@
-import { Activity, Bone, Brain, Heart, Baby, Dumbbell } from "lucide-react";
+import { Activity, Bone, Brain, Heart, Baby, Dumbbell, Users } from "lucide-react";
 
 const specialties = [
   {
@@ -12,6 +12,12 @@ const specialties = [
     title: "Osteopatía",
     description: "Enfoque integral del cuerpo para restaurar el equilibrio estructural. Tratamos disfunciones del sistema musculoesquelético, visceral y craneal.",
     treatments: ["Técnicas estructurales", "Osteopatía visceral", "Osteopatía craneal", "Liberación miofascial"],
+  },
+  {
+    icon: Users,
+    title: "Suelo Pélvico",
+    description: "Tratamiento especializado de disfunciones del suelo pélvico en mujeres y hombres. Incontinencia, prolapsos, dolor pélvico y rehabilitación pre/postparto.",
+    treatments: ["Incontinencia urinaria", "Rehabilitación postparto", "Dolor pélvico", "Preparación al parto"],
   },
   {
     icon: Brain,

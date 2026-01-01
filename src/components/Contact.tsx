@@ -10,7 +10,7 @@ const contactInfo = [
   {
     icon: Clock,
     title: "Horario",
-    content: "Lunes a Viernes: 9:00 - 20:00\nSábados: 9:00 - 14:00",
+    content: "Lunes a Jueves: 8:30 - 13:30 y 15:30 - 20:00\nViernes: 8:00 - 14:00\nFines de semana: Cerrado",
   },
 ];
 

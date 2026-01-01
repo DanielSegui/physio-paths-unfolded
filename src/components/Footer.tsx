@@ -2,8 +2,6 @@ import { Facebook, Instagram, Linkedin } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
-
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 py-12">
@@ -66,7 +64,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
           <p className="text-primary-foreground/60 text-sm">
-            © {currentYear} Centre Fisioteràpia Osteopatia Jordi Seguí Mallol. Todos los derechos reservados.
+            © Centre Fisioteràpia Osteopatia Jordi Seguí Mallol. Todos los derechos reservados.
           </p>
         </div>
       </div>

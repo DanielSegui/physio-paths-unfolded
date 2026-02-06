@@ -1,5 +1,5 @@
 import { ArrowDown } from "lucide-react";
-import heroBackground from "@/assets/hero-background.png";
+import heroBackground from "@/assets/hero-background.jpg";
 
 const Hero = () => {
   return (

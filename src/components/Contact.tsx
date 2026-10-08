@@ -35,7 +35,7 @@ const Contact = () => {
           <div className="grid sm:grid-cols-2 gap-6 mb-12">
             <a
               href={`tel:${phoneNumber}`}
-              className="flex items-center justify-center gap-4 bg-primary text-primary-foreground rounded-2xl p-8 shadow-sm  hover:-translate-y-1 transition-all duration-300"
+              className="flex items-center justify-center gap-4 bg-primary text-primary-foreground rounded-2xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
             >
               <div className="w-16 h-16 rounded-full bg-primary-foreground/20 flex items-center justify-center">
                 <Phone className="w-8 h-8" />
@@ -50,7 +50,7 @@ const Contact = () => {
               href={`https://wa.me/${whatsappNumber}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-4 bg-[hsl(142,70%,45%)] text-primary-foreground rounded-2xl p-8 shadow-sm  hover:-translate-y-1 transition-all duration-300"
+              className="flex items-center justify-center gap-4 bg-[hsl(142,70%,45%)] text-primary-foreground rounded-2xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
             >
               <div className="w-16 h-16 rounded-full bg-primary-foreground/20 flex items-center justify-center">
                 <MessageCircle className="w-8 h-8" />
@@ -67,7 +67,7 @@ const Contact = () => {
             {contactInfo.map((info) => (
               <div
                 key={info.title}
-                className="bg-card rounded-2xl p-6 shadow-sm border border-border/50 card-hover text-center"
+                className="bg-card rounded-2xl p-6 shadow-lg border border-border/50 card-hover text-center"
               >
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-secondary to-accent flex items-center justify-center mx-auto mb-4">
                   <info.icon className="w-6 h-6 text-accent-foreground" />

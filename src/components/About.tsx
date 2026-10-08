@@ -54,7 +54,7 @@ const About = () => {
           <div className="relative">
             {/* Decorative background */}
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/10 rounded-3xl -rotate-3" />
-            <div className="relative bg-card rounded-3xl p-8 shadow-sm border border-border/50">
+            <div className="relative bg-card rounded-3xl p-8 shadow-xl border border-border/50">
               {/* Stats */}
               <div className="grid grid-cols-3 gap-4 mb-8">
                 {stats.map((stat) => (

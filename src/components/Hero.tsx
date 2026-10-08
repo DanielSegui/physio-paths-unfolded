@@ -1,35 +1,64 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
 
 const Hero = () => {
   return (
-    <section id="inicio" className="relative min-h-[92vh] flex items-end overflow-hidden">
-      <div
-        className="absolute inset-0 bg-cover bg-center scale-105"
+    <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBackground})` }}
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/55 to-primary/20" />
+      
+      {/* Overlay for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/70 to-primary/50" />
+      
+      {/* Decorative circles inspired by logo */}
+      <div className="absolute top-20 right-10 w-32 h-32 rounded-full bg-accent/20 animate-float" />
+      <div className="absolute top-40 right-32 w-16 h-16 rounded-full bg-secondary/30 animate-float" style={{ animationDelay: "0.5s" }} />
+      <div className="absolute bottom-32 left-10 w-24 h-24 rounded-full bg-primary-foreground/10 animate-float" style={{ animationDelay: "1s" }} />
+      <div className="absolute bottom-20 right-20 w-12 h-12 rounded-full bg-accent/25 animate-float" style={{ animationDelay: "1.5s" }} />
+      {/* Spine decoration */}
+      <div className="absolute left-8 top-1/4 hidden lg:flex flex-col items-center gap-3">
+        {[...Array(8)].map((_, i) => (
+          <div
+            key={i}
+            className="rounded-full bg-gradient-to-b from-spine-light to-spine-blue animate-pulse-soft"
+            style={{
+              width: `${20 - i * 1.5}px`,
+              height: `${20 - i * 1.5}px`,
+              animationDelay: `${i * 0.2}s`,
+            }}
+          />
+        ))}
+      </div>
 
-      <div className="relative container mx-auto px-6 pb-20 md:pb-28 pt-32">
-        <div className="max-w-2xl">
-          <p className="text-xs md:text-sm uppercase tracking-[0.3em] text-primary-foreground/70 mb-6 animate-fade-in">
-            Fisioterapia · Osteopatía · Suelo pélvico
-          </p>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.05] text-primary-foreground mb-6 animate-fade-in">
-            Tu bienestar,<br />en buenas manos.
+      <div className="container mx-auto px-4 pt-20">
+        <div className="max-w-3xl mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 animate-fade-in font-heading">
+            Tu bienestar es nuestra{" "}
+            <span className="text-accent">prioridad</span>
           </h1>
-          <p className="text-lg text-primary-foreground/80 mb-10 max-w-lg animate-fade-in" style={{ animationDelay: "0.15s" }}>
-            Tratamientos personalizados para recuperar tu movilidad y tu calidad de vida.
+          <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            Centro especializado en fisioterapia y osteopatía. 
+            Tratamientos personalizados para recuperar tu calidad de vida.
           </p>
-          <div className="flex flex-wrap gap-3 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-            <a href="#contacto" className="group inline-flex items-center gap-2 bg-primary-foreground text-primary px-7 py-3.5 rounded-full font-medium transition-all hover:gap-3">
-              Pedir cita <ArrowRight className="w-4 h-4" />
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: "0.4s" }}>
+            <a href="#especialidades" className="bg-accent text-accent-foreground hover:bg-accent/90 px-6 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+              Nuestras Especialidades
             </a>
-            <a href="#especialidades" className="inline-flex items-center px-7 py-3.5 rounded-full font-medium text-primary-foreground border border-primary-foreground/40 hover:bg-primary-foreground/10 transition-colors">
-              Especialidades
+            <a href="#contacto" className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary px-6 py-3 rounded-lg font-medium transition-all duration-300">
+              Pedir Cita
             </a>
           </div>
         </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        <a href="#especialidades" aria-label="Scroll down">
+          <ArrowDown className="w-6 h-6 text-primary-foreground/60" />
+        </a>
       </div>
     </section>
   );

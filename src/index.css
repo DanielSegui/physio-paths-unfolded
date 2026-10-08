@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,7 +7,7 @@
 @layer base {
   :root {
     /* Medical Blue Theme inspired by logo */
-    --background: 0 0% 100%;
+    --background: 210 33% 98%;
     --foreground: 215 50% 23%;
 
     --card: 0 0% 100%;
@@ -24,7 +24,7 @@
     --secondary: 205 80% 55%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 25% 97%;
+    --muted: 210 30% 95%;
     --muted-foreground: 215 20% 50%;
 
     /* Accent - Bright blue circle from logo */
@@ -34,11 +34,11 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 25% 91%;
-    --input: 214 25% 91%;
+    --border: 210 30% 88%;
+    --input: 210 30% 88%;
     --ring: 215 65% 30%;
 
-    --radius: 1rem;
+    --radius: 0.75rem;
 
     /* Custom colors */
     --spine-blue: 215 65% 30%;
@@ -101,8 +101,6 @@
   * {
     @apply border-border;
   }
-  html { scroll-behavior: smooth; }
-  section { @apply py-24 md:py-32; }
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
@@ -123,7 +121,7 @@
   }
 
   .card-hover {
-    @apply transition-all duration-300 hover:border-primary/30 hover:-translate-y-0.5;
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
   }
 
   .spine-decoration {
@@ -138,28 +136,29 @@
 @layer components {
   .btn-primary {
     @apply bg-primary text-primary-foreground hover:bg-primary/90 
-           px-7 py-3.5 rounded-full font-medium transition-all duration-300;
+           px-6 py-3 rounded-lg font-medium transition-all duration-300
+           shadow-lg hover:shadow-xl hover:-translate-y-0.5;
   }
 
   .btn-secondary {
     @apply bg-secondary text-secondary-foreground hover:bg-secondary/90 
-           px-7 py-3.5 rounded-full font-medium transition-all duration-300;
+           px-6 py-3 rounded-lg font-medium transition-all duration-300;
   }
 
   .btn-outline {
-    @apply border border-primary text-primary hover:bg-primary hover:text-primary-foreground
-           px-7 py-3.5 rounded-full font-medium transition-all duration-300;
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground
+           px-6 py-3 rounded-lg font-medium transition-all duration-300;
   }
 
   .section-title {
-    @apply text-3xl md:text-5xl font-semibold text-foreground mb-5 tracking-tight;
+    @apply text-3xl md:text-4xl font-bold text-foreground mb-4;
   }
 
   .section-subtitle {
-    @apply text-lg text-muted-foreground max-w-2xl leading-relaxed;
+    @apply text-lg text-muted-foreground max-w-2xl;
   }
 
   .specialty-card {
-    @apply bg-card rounded-2xl p-8 card-hover border border-border;
+    @apply bg-card rounded-2xl p-8 shadow-lg card-hover border border-border/50;
   }
 }

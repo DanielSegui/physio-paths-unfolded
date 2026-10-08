@@ -122,7 +122,7 @@ const Gallery = () => {
                   onClick={() => setSelectedCategory(category)}
                   className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
                     selectedCategory === category
-                      ? "bg-primary text-primary-foreground shadow-lg"
+                      ? "bg-primary text-primary-foreground shadow-sm"
                       : "bg-muted text-muted-foreground hover:bg-muted/80"
                   }`}
                 >
@@ -140,7 +140,7 @@ const Gallery = () => {
               {filteredImages.map((image, index) => (
                 <div
                   key={index}
-                  className="group relative aspect-square overflow-hidden rounded-xl cursor-pointer shadow-md hover:shadow-xl transition-all duration-300"
+                  className="group relative aspect-square overflow-hidden rounded-xl cursor-pointer shadow-md  transition-all duration-300"
                   onClick={() => setSelectedImage(image.src)}
                 >
                   <img
